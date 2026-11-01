@@ -14,6 +14,8 @@ luminosity:
   2018: 59.83
   2024: 109.95
   2025: 110.84
+  # 2026: brilcalc normtag_BRIL on golden 401624-403937 (eras A, B, D), preliminary.
+  2026: 25.79
 
 # Era -> luminosity year.
 year:
@@ -27,6 +29,7 @@ year:
   2023BPix: 2023
   2024: 2024
   2025: 2025
+  2026: 2026
 
 uncertainties:
   # Run 2: TWiki LumiRecommendationsRun2, "new recommendation scheme" (Cholesky
@@ -54,3 +57,8 @@ uncertainties:
   lumi_13p6TeV_2025:
     kappa: {2025: 1.05}
     description: "2025 luminosity, preliminary 5% (LUM POG), uncorrelated with previous years"
+  # 2026: no LUM POG recommendation yet. PLACEHOLDER 5%, uncorrelated with
+  # every other year, until the POG publishes a value.
+  lumi_13p6TeV_2026:
+    kappa: {2026: 1.05}
+    description: "2026 luminosity, PLACEHOLDER 5% (no LUM POG value yet), uncorrelated with previous years"

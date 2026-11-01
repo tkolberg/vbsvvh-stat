@@ -60,5 +60,13 @@ def test_2025_alone(analysis):
     assert analysis.lumi_kappas("2025") == {"lumi_13p6TeV_2025": 1.05}
 
 
+def test_2026_alone(analysis):
+    assert analysis.lumi_kappas("2026") == {"lumi_13p6TeV_2026": 1.05}
+
+
+def test_2026_placeholder_is_flagged(analysis):
+    assert "PLACEHOLDER" in analysis.lumi["lumi_13p6TeV_2026"]["description"]
+
+
 def test_both_2016_halves_share_the_2016_nuisances(analysis):
     assert analysis.lumi_kappas("2016preVFP") == analysis.lumi_kappas("2016postVFP")

@@ -245,3 +245,14 @@ def test_unblind_must_be_a_boolean(tmp_path, monkeypatch, analysis):
     ch = write_channel(tmp_path / "ch", "T", abcd_hists(["2018"]), ABCD)
     with pytest.raises(ConfigError, match="'unblind' must be true or false"):
         make_result(tmp_path, monkeypatch, analysis, {"T": ch}, unblind="yes")
+
+
+def test_a_2026_region_gets_the_2026_luminosity(tmp_path, monkeypatch, analysis):
+    ch = write_channel(tmp_path / "ch", "T", abcd_hists(["2026"]), ABCD)
+    result, index = make_result(tmp_path, monkeypatch, analysis, {"T": ch}, runs={"Run3_2026": {"eras": [2026]}})
+    dc = parse(index["cards"][SIG]["Run3_2026"][0])
+    assert kappa(dc, "lumi_13p6TeV_2026", "T_A_Run3_2026", SIG)[1] == pytest.approx(1.05)
+    assert not any(s[0].startswith("lumi") and s[0] != "lumi_13p6TeV_2026" for s in dc.systs)
+    decl = yaml.safe_load((result["results_dir"] / "cards" / "systematics.yml").read_text())
+    assert decl["lumi_13p6TeV_2026"]["class"] == "custom"
+    assert "PLACEHOLDER" in decl["lumi_13p6TeV_2026"]["description"]

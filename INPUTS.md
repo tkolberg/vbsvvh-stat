@@ -26,7 +26,7 @@ One TH1 per era, region and process, with the sum of squared weights stored
 | `<era>/<region>/<process>__<nuisance>Down` | systematic variation down |
 | `<era>/<region>/data_obs` | data |
 
-- **Eras**: `2016preVFP`, `2016postVFP`, `2017`, `2018`, `2024`, `2025`. All the eras
+- **Eras**: `2016preVFP`, `2016postVFP`, `2017`, `2018`, `2024`, `2025`, `2026`. All the eras
   of the channel go in the same file. `2022`, `2022EE`, `2023`, `2023BPix` are not
   implemented yet and are rejected.
 - **Regions**: named freely. A region with one bin is a counting region; a region

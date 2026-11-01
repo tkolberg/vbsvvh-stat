@@ -143,8 +143,9 @@ year; an era takes the column of its year (both 2016 halves are 2016, 2022EE is
   names). Keeping only the columns of the years present gives exactly the
   covariance of those years, so the same table serves any subset.
 - 2025: 5%, uncorrelated with everything (preliminary).
+- 2026: 5%, uncorrelated with everything. PLACEHOLDER: the POG has no 2026 value yet.
 
-The Run 2 Cholesky names and `lumi_13p6TeV_2025` are not in the CMS dictionary yet;
+The Run 2 Cholesky names and `lumi_13p6TeV_2025`/`_2026` are not in the CMS dictionary yet;
 `systematics.yml` declares them `custom` with a description.
 
 ### Projections

@@ -1,6 +1,6 @@
 # Every nuisance a channel may deliver in its shapes.root, for the whole analysis.
 #
-# "{era}" stands for any datacard era tag (2016preVFP ... 2025). A name in the CMS
+# "{era}" stands for any datacard era tag (2016preVFP ... 2026). A name in the CMS
 # dictionary (systematics/systematics_master.yml) needs nothing else; any other
 # name needs a description, and is declared "custom" for the CMS name check. An
 # "{era}" entry the dictionary covers only for some eras gives the description for the others.

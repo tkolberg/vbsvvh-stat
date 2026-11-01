@@ -9,7 +9,7 @@ REPO = Path(__file__).resolve().parents[1]
 
 #: Datacard era tags, chronological.
 ERAS = ("2016preVFP", "2016postVFP", "2017", "2018",
-        "2022", "2022EE", "2023", "2023BPix", "2024", "2025")
+        "2022", "2022EE", "2023", "2023BPix", "2024", "2025", "2026")
 RUNS = {"Run2": ERAS[:4], "Run3": ERAS[4:]}
 #: Centre-of-mass energy tag of a nuisance name -> the eras it is correlated across.
 ENERGIES = {"13TeV": RUNS["Run2"], "13p6TeV": RUNS["Run3"]}
